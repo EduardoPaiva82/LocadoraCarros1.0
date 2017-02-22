@@ -24,7 +24,7 @@ public class LoginCliente extends javax.swing.JPanel {
     ResultSet rs = null;
 
     public void logar() {
-        String SQL = "select * from Usuario where nomeLogin= ? and senhaLogin= ?";
+        String SQL = "SELECT * FROM Usuario WHERE nomeLogin= ? AND senhaLogin= ?";
 
         try {
 

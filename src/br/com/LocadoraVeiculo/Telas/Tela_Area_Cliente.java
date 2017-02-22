@@ -5,9 +5,9 @@
  */
 package br.com.LocadoraVeiculo.Telas;
 
+
 import br.com.LocadoraVeiculo.TabelaVeiculos.Tela_Categorias;
 import java.awt.Dimension;
-import java.util.Locale;
 import javax.swing.JInternalFrame;
 
 /**
@@ -44,11 +44,7 @@ public class Tela_Area_Cliente extends javax.swing.JFrame {
         AreaTrabCliente = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
-        catA = new javax.swing.JMenuItem();
-        catB = new javax.swing.JMenuItem();
-        catC = new javax.swing.JMenuItem();
-        catD = new javax.swing.JMenuItem();
-        catE = new javax.swing.JMenuItem();
+        CatalogoDeVeiculos = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         cutMenuItem = new javax.swing.JMenuItem();
         copyMenuItem = new javax.swing.JMenuItem();
@@ -66,40 +62,25 @@ public class Tela_Area_Cliente extends javax.swing.JFrame {
         AreaTrabCliente.setName(""); // NOI18N
 
         fileMenu.setMnemonic('f');
-        fileMenu.setText("Veiculos");
+        fileMenu.setText("Veiculos  ");
+        fileMenu.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
-        catA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeSetapraDireita.png"))); // NOI18N
-        catA.setMnemonic('o');
-        catA.setText("Categória A");
-        catA.addActionListener(new java.awt.event.ActionListener() {
+        CatalogoDeVeiculos.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        CatalogoDeVeiculos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeSetapraDireita.png"))); // NOI18N
+        CatalogoDeVeiculos.setMnemonic('o');
+        CatalogoDeVeiculos.setText("Catálogo de Veículos");
+        CatalogoDeVeiculos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                catAActionPerformed(evt);
+                CatalogoDeVeiculosActionPerformed(evt);
             }
         });
-        fileMenu.add(catA);
-
-        catB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeSetapraDireita.png"))); // NOI18N
-        catB.setMnemonic('s');
-        catB.setText("Categória B");
-        fileMenu.add(catB);
-
-        catC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeSetapraDireita.png"))); // NOI18N
-        catC.setMnemonic('a');
-        catC.setText("Categória C");
-        fileMenu.add(catC);
-
-        catD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeSetapraDireita.png"))); // NOI18N
-        catD.setText("Categória D");
-        fileMenu.add(catD);
-
-        catE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeSetapraDireita.png"))); // NOI18N
-        catE.setText("Categória E");
-        fileMenu.add(catE);
+        fileMenu.add(CatalogoDeVeiculos);
 
         menuBar.add(fileMenu);
 
         editMenu.setMnemonic('e');
-        editMenu.setText("Pagamento");
+        editMenu.setText("Pagamento  ");
+        editMenu.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         cutMenuItem.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         cutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/InconePagVista.png"))); // NOI18N
@@ -122,13 +103,17 @@ public class Tela_Area_Cliente extends javax.swing.JFrame {
 
         helpMenu.setMnemonic('h');
         helpMenu.setText("Contatos");
+        helpMenu.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
+        contentMenuItem.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         contentMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeAtendente.png"))); // NOI18N
         contentMenuItem.setMnemonic('F');
         contentMenuItem.setText("Fale Conosco");
         helpMenu.add(contentMenuItem);
 
-        aboutMenuItem.setMnemonic('o');
+        aboutMenuItem.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        aboutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/icone_termo.png"))); // NOI18N
+        aboutMenuItem.setMnemonic('N');
         aboutMenuItem.setText("Nossos Termos");
         helpMenu.add(aboutMenuItem);
 
@@ -144,20 +129,23 @@ public class Tela_Area_Cliente extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(AreaTrabCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(AreaTrabCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(810, 653));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void catAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catAActionPerformed
+    private void CatalogoDeVeiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatalogoDeVeiculosActionPerformed
         Tela_Categorias cat = new Tela_Categorias();
         AreaTrabCliente.add(cat);
         cat.setVisible(true);
         centralizaJInternalFrame(cat);
        
         
-    }//GEN-LAST:event_catAActionPerformed
+    }//GEN-LAST:event_CatalogoDeVeiculosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,12 +185,8 @@ public class Tela_Area_Cliente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane AreaTrabCliente;
+    private javax.swing.JMenuItem CatalogoDeVeiculos;
     private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JMenuItem catA;
-    private javax.swing.JMenuItem catB;
-    private javax.swing.JMenuItem catC;
-    private javax.swing.JMenuItem catD;
-    private javax.swing.JMenuItem catE;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;

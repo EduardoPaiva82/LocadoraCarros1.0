@@ -6,7 +6,6 @@
 package br.com.LocadoraVeiculo.TabelaVeiculos;
 
 import java.awt.Color;
-import java.awt.event.KeyEvent;
 
 /**
  *
@@ -60,7 +59,7 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
 
         PainelCategorias = new javax.swing.JTabbedPane();
         PainelCatA = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        jPanelCatalogo = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jPanelFichaTecnica = new javax.swing.JPanel();
@@ -74,11 +73,11 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLbResultado = new javax.swing.JLabel();
         bntCalcular = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        carro1_catA = new javax.swing.JLabel();
         jgbFichaTecnica = new javax.swing.JToggleButton();
         jgbLocar = new javax.swing.JToggleButton();
         jLSituacao = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        carro2_catA = new javax.swing.JLabel();
         jLSituacao1 = new javax.swing.JLabel();
         jgbFichaTecnica1 = new javax.swing.JToggleButton();
         jgbLocar1 = new javax.swing.JToggleButton();
@@ -94,9 +93,126 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         jLbResultado1 = new javax.swing.JLabel();
         bntCalcular1 = new javax.swing.JButton();
         PainelCatB = new javax.swing.JTabbedPane();
+        jPanelCatalogo1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanel3 = new javax.swing.JPanel();
+        jPanelFichaTecnica2 = new javax.swing.JPanel();
+        jLDescricao3 = new javax.swing.JLabel();
+        QntDias2 = new javax.swing.JLabel();
+        jSpinnerQntDias2 = new javax.swing.JSpinner();
+        jTextFieldVlrDiaria2 = new javax.swing.JTextField();
+        ValorDiaria2 = new javax.swing.JLabel();
+        Total2 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLbResultado2 = new javax.swing.JLabel();
+        bntCalcular2 = new javax.swing.JButton();
+        carro1_catB = new javax.swing.JLabel();
+        jgbFichaTecnica2 = new javax.swing.JToggleButton();
+        jgbLocar2 = new javax.swing.JToggleButton();
+        jLSituacao2 = new javax.swing.JLabel();
+        carro2_catB = new javax.swing.JLabel();
+        jLSituacao3 = new javax.swing.JLabel();
+        jgbFichaTecnica3 = new javax.swing.JToggleButton();
+        jgbLocar3 = new javax.swing.JToggleButton();
+        jPanelFichaTecnica3 = new javax.swing.JPanel();
+        jLDescricao4 = new javax.swing.JLabel();
+        QntDias3 = new javax.swing.JLabel();
+        jSpinnerQntDias3 = new javax.swing.JSpinner();
+        jTextFieldVlrDiaria3 = new javax.swing.JTextField();
+        ValorDiaria3 = new javax.swing.JLabel();
+        Total3 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLbResultado3 = new javax.swing.JLabel();
+        bntCalcular3 = new javax.swing.JButton();
         PainelCatC = new javax.swing.JTabbedPane();
+        jPanelCatalogo2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanel4 = new javax.swing.JPanel();
+        jPanelFichaTecnica4 = new javax.swing.JPanel();
+        jLDescricao5 = new javax.swing.JLabel();
+        QntDias4 = new javax.swing.JLabel();
+        jSpinnerQntDias4 = new javax.swing.JSpinner();
+        jTextFieldVlrDiaria4 = new javax.swing.JTextField();
+        ValorDiaria4 = new javax.swing.JLabel();
+        Total4 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLbResultado4 = new javax.swing.JLabel();
+        bntCalcular4 = new javax.swing.JButton();
+        carro1_catC = new javax.swing.JLabel();
+        jgbFichaTecnica4 = new javax.swing.JToggleButton();
+        jgbLocar4 = new javax.swing.JToggleButton();
+        jLSituacao4 = new javax.swing.JLabel();
+        carro2_catC = new javax.swing.JLabel();
+        jLSituacao5 = new javax.swing.JLabel();
+        jgbFichaTecnica5 = new javax.swing.JToggleButton();
+        jgbLocar5 = new javax.swing.JToggleButton();
+        jPanelFichaTecnica5 = new javax.swing.JPanel();
+        jLDescricao6 = new javax.swing.JLabel();
+        QntDias5 = new javax.swing.JLabel();
+        jSpinnerQntDias5 = new javax.swing.JSpinner();
+        jTextFieldVlrDiaria5 = new javax.swing.JTextField();
+        ValorDiaria5 = new javax.swing.JLabel();
+        Total5 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLbResultado5 = new javax.swing.JLabel();
+        bntCalcular5 = new javax.swing.JButton();
         PainelCatD = new javax.swing.JTabbedPane();
+        jPanelCatalogo3 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jPanel5 = new javax.swing.JPanel();
+        jPanelFichaTecnica6 = new javax.swing.JPanel();
+        jLDescricao7 = new javax.swing.JLabel();
+        QntDias6 = new javax.swing.JLabel();
+        jSpinnerQntDias6 = new javax.swing.JSpinner();
+        jTextFieldVlrDiaria6 = new javax.swing.JTextField();
+        ValorDiaria6 = new javax.swing.JLabel();
+        Total6 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLbResultado6 = new javax.swing.JLabel();
+        bntCalcular6 = new javax.swing.JButton();
+        carro1_catD = new javax.swing.JLabel();
+        jgbFichaTecnica6 = new javax.swing.JToggleButton();
+        jgbLocar6 = new javax.swing.JToggleButton();
+        jLSituacao6 = new javax.swing.JLabel();
+        carro2_catD = new javax.swing.JLabel();
+        jLSituacao7 = new javax.swing.JLabel();
+        jgbFichaTecnica7 = new javax.swing.JToggleButton();
+        jgbLocar7 = new javax.swing.JToggleButton();
+        jPanelFichaTecnica7 = new javax.swing.JPanel();
+        jLDescricao8 = new javax.swing.JLabel();
+        QntDias7 = new javax.swing.JLabel();
+        jSpinnerQntDias7 = new javax.swing.JSpinner();
+        jTextFieldVlrDiaria7 = new javax.swing.JTextField();
+        ValorDiaria7 = new javax.swing.JLabel();
+        Total7 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLbResultado7 = new javax.swing.JLabel();
+        bntCalcular7 = new javax.swing.JButton();
         PainelCatE = new javax.swing.JTabbedPane();
+        jPanelCatalogo4 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jPanel6 = new javax.swing.JPanel();
+        jPanelFichaTecnica8 = new javax.swing.JPanel();
+        jLDescricao9 = new javax.swing.JLabel();
+        QntDias8 = new javax.swing.JLabel();
+        jSpinnerQntDias8 = new javax.swing.JSpinner();
+        jTextFieldVlrDiaria8 = new javax.swing.JTextField();
+        ValorDiaria8 = new javax.swing.JLabel();
+        Total8 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLbResultado8 = new javax.swing.JLabel();
+        bntCalcular8 = new javax.swing.JButton();
+        carro1_catE = new javax.swing.JLabel();
+        jgbFichaTecnica8 = new javax.swing.JToggleButton();
+        jgbLocar8 = new javax.swing.JToggleButton();
+        jLSituacao8 = new javax.swing.JLabel();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -106,31 +222,43 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
 
         jScrollPane1.setAutoscrolls(true);
 
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jPanelFichaTecnica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelFichaTecnica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLDescricao1.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
         jLDescricao1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelFichaTecnica.add(jLDescricao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 16, 270, 126));
 
         QntDias.setText("Quant. Dias");
+        jPanelFichaTecnica.add(QntDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 160, -1, -1));
 
         jSpinnerQntDias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
         jSpinnerQntDias.setFocusable(false);
+        jPanelFichaTecnica.add(jSpinnerQntDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 181, 52, 28));
 
         jTextFieldVlrDiaria.setEditable(false);
         jTextFieldVlrDiaria.setText("75.00");
+        jPanelFichaTecnica.add(jTextFieldVlrDiaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 182, -1, -1));
 
         ValorDiaria.setText("Valor Diária");
+        jPanelFichaTecnica.add(ValorDiaria, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 160, -1, -1));
 
         Total.setText("Total");
+        jPanelFichaTecnica.add(Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 50, 30));
 
         jLabel5.setText("R$");
+        jPanelFichaTecnica.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 188, -1, -1));
 
         jLabel6.setText("R$");
+        jPanelFichaTecnica.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, 20));
 
         jLbResultado.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jLbResultado.setForeground(new java.awt.Color(204, 51, 0));
         jLbResultado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLbResultado.setText("0");
+        jPanelFichaTecnica.add(jLbResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, -1));
 
         bntCalcular.setText("Calcular");
         bntCalcular.addActionListener(new java.awt.event.ActionListener() {
@@ -138,92 +266,57 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
                 bntCalcularActionPerformed(evt);
             }
         });
+        jPanelFichaTecnica.add(bntCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
-        javax.swing.GroupLayout jPanelFichaTecnicaLayout = new javax.swing.GroupLayout(jPanelFichaTecnica);
-        jPanelFichaTecnica.setLayout(jPanelFichaTecnicaLayout);
-        jPanelFichaTecnicaLayout.setHorizontalGroup(
-            jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFichaTecnicaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanelFichaTecnicaLayout.createSequentialGroup()
-                        .addGroup(jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(QntDias)
-                            .addComponent(jSpinnerQntDias, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ValorDiaria)
-                            .addGroup(jPanelFichaTecnicaLayout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldVlrDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Total)
-                            .addGroup(jPanelFichaTecnicaLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLbResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelFichaTecnicaLayout.createSequentialGroup()
-                        .addComponent(bntCalcular)
-                        .addGap(103, 103, 103)))
-                .addGap(14, 14, 14))
-            .addGroup(jPanelFichaTecnicaLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLDescricao1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-        jPanelFichaTecnicaLayout.setVerticalGroup(
-            jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFichaTecnicaLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLDescricao1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(QntDias)
-                    .addComponent(ValorDiaria)
-                    .addComponent(Total))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelFichaTecnicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerQntDias, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldVlrDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLbResultado))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bntCalcular)
-                .addGap(12, 12, 12))
-        );
+        jPanel2.add(jPanelFichaTecnica, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, 247));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/Gol G7.png"))); // NOI18N
-        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        carro1_catA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/Gol G7.png"))); // NOI18N
+        carro1_catA.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel2.add(carro1_catA, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 230, 172));
 
         jgbFichaTecnica.setText("Ficha Técnica");
-        jgbFichaTecnica.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jgbFichaTecnicaActionPerformed(evt);
+        jgbFichaTecnica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnicaMouseClicked(evt);
             }
         });
+        jPanel2.add(jgbFichaTecnica, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, 57));
 
         jgbLocar.setText("Locar");
+        jgbLocar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jgbLocarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jgbLocar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 110, 57));
 
         jLSituacao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLSituacao.setText("Disponivel");
+        jPanel2.add(jLSituacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 127, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/mobil.png"))); // NOI18N
-        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        carro2_catA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/mobil.png"))); // NOI18N
+        carro2_catA.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel2.add(carro2_catA, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 230, 172));
 
         jLSituacao1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLSituacao1.setText("Disponivel");
+        jPanel2.add(jLSituacao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 127, -1));
 
         jgbFichaTecnica1.setText("Ficha Técnica");
+        jgbFichaTecnica1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica1MouseClicked(evt);
+            }
+        });
         jgbFichaTecnica1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jgbFichaTecnica1ActionPerformed(evt);
             }
         });
+        jPanel2.add(jgbFichaTecnica1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, -1, 57));
 
         jgbLocar1.setText("Locar");
+        jPanel2.add(jgbLocar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, 111, 57));
 
         jPanelFichaTecnica1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -236,7 +329,7 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         jSpinnerQntDias1.setFocusable(false);
 
         jTextFieldVlrDiaria1.setEditable(false);
-        jTextFieldVlrDiaria1.setText("75.00");
+        jTextFieldVlrDiaria1.setText("65.00");
 
         ValorDiaria1.setText("Valor Diária");
 
@@ -262,141 +355,833 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         jPanelFichaTecnica1.setLayout(jPanelFichaTecnica1Layout);
         jPanelFichaTecnica1Layout.setHorizontalGroup(
             jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFichaTecnica1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
-                        .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(QntDias1)
-                            .addComponent(jSpinnerQntDias1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ValorDiaria1)
-                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldVlrDiaria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Total1)
-                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLbResultado1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
-                        .addComponent(bntCalcular1)
-                        .addGap(103, 103, 103)))
-                .addGap(14, 14, 14))
             .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLDescricao2, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addComponent(jLDescricao2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(QntDias1)
+                    .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jSpinnerQntDias1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
+                .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bntCalcular1)
+                    .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                        .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(ValorDiaria1))
+                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(12, 12, 12)
+                                .addComponent(jTextFieldVlrDiaria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(Total1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel8)
+                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLbResultado1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))))
         );
         jPanelFichaTecnica1Layout.setVerticalGroup(
             jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(11, 11, 11)
                 .addComponent(jLDescricao2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(QntDias1)
-                    .addComponent(ValorDiaria1)
-                    .addComponent(Total1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinnerQntDias1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldVlrDiaria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(jLbResultado1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bntCalcular1)
-                .addContainerGap())
+                .addGap(11, 11, 11)
+                .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                        .addComponent(Total1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLbResultado1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                                .addComponent(QntDias1)
+                                .addGap(6, 6, 6)
+                                .addComponent(jSpinnerQntDias1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                                .addComponent(ValorDiaria1)
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanelFichaTecnica1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelFichaTecnica1Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel7))
+                                    .addComponent(jTextFieldVlrDiaria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(bntCalcular1))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanelFichaTecnica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jgbFichaTecnica)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jgbLocar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jPanelFichaTecnica1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(86, 86, 86)
-                                .addComponent(jLSituacao, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(49, 49, 49)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jgbFichaTecnica1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jgbLocar1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(54, 54, 54)
-                                .addComponent(jLSituacao1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelFichaTecnica, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addComponent(jLSituacao)
-                        .addGap(2, 2, 2)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jgbFichaTecnica, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-                            .addComponent(jgbLocar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(45, 45, 45)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelFichaTecnica1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addComponent(jLSituacao1)
-                        .addGap(2, 2, 2)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jgbFichaTecnica1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jgbLocar1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(15, 15, 15))
-        );
+        jPanel2.add(jPanelFichaTecnica1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, 247));
 
         jScrollPane1.setViewportView(jPanel2);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+        javax.swing.GroupLayout jPanelCatalogoLayout = new javax.swing.GroupLayout(jPanelCatalogo);
+        jPanelCatalogo.setLayout(jPanelCatalogoLayout);
+        jPanelCatalogoLayout.setHorizontalGroup(
+            jPanelCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogoLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanelCatalogoLayout.setVerticalGroup(
+            jPanelCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogoLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 14, Short.MAX_VALUE))
+        );
+
+        PainelCatA.addTab("Tabela A", jPanelCatalogo);
+
+        PainelCategorias.addTab("Categoria A", PainelCatA);
+
+        jScrollPane2.setAutoscrolls(true);
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelFichaTecnica2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelFichaTecnica2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLDescricao3.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
+        jLDescricao3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelFichaTecnica2.add(jLDescricao3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 16, 270, 126));
+
+        QntDias2.setText("Quant. Dias");
+        jPanelFichaTecnica2.add(QntDias2, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 160, -1, -1));
+
+        jSpinnerQntDias2.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jSpinnerQntDias2.setFocusable(false);
+        jPanelFichaTecnica2.add(jSpinnerQntDias2, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 181, 52, 28));
+
+        jTextFieldVlrDiaria2.setEditable(false);
+        jTextFieldVlrDiaria2.setText("70.00");
+        jPanelFichaTecnica2.add(jTextFieldVlrDiaria2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 182, -1, -1));
+
+        ValorDiaria2.setText("Valor Diária");
+        jPanelFichaTecnica2.add(ValorDiaria2, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 160, -1, -1));
+
+        Total2.setText("Total");
+        jPanelFichaTecnica2.add(Total2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 50, 30));
+
+        jLabel9.setText("R$");
+        jPanelFichaTecnica2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 188, -1, -1));
+
+        jLabel10.setText("R$");
+        jPanelFichaTecnica2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, 20));
+
+        jLbResultado2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLbResultado2.setForeground(new java.awt.Color(204, 51, 0));
+        jLbResultado2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLbResultado2.setText("0");
+        jPanelFichaTecnica2.add(jLbResultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, -1));
+
+        bntCalcular2.setText("Calcular");
+        bntCalcular2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCalcular2ActionPerformed(evt);
+            }
+        });
+        jPanelFichaTecnica2.add(bntCalcular2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
+
+        jPanel3.add(jPanelFichaTecnica2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, 247));
+
+        carro1_catB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/Palio Atractive.png"))); // NOI18N
+        carro1_catB.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel3.add(carro1_catB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 230, 172));
+
+        jgbFichaTecnica2.setText("Ficha Técnica");
+        jgbFichaTecnica2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica2MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jgbFichaTecnica2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, 57));
+
+        jgbLocar2.setText("Locar");
+        jgbLocar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jgbLocar2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jgbLocar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 110, 57));
+
+        jLSituacao2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSituacao2.setText("Disponivel");
+        jPanel3.add(jLSituacao2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 127, -1));
+
+        carro2_catB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/Sandero.png"))); // NOI18N
+        carro2_catB.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel3.add(carro2_catB, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 230, 172));
+
+        jLSituacao3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSituacao3.setText("Disponivel");
+        jPanel3.add(jLSituacao3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 127, -1));
+
+        jgbFichaTecnica3.setText("Ficha Técnica");
+        jgbFichaTecnica3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica3MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jgbFichaTecnica3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, -1, 57));
+
+        jgbLocar3.setText("Locar");
+        jPanel3.add(jgbLocar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, 111, 57));
+
+        jPanelFichaTecnica3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLDescricao4.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
+        jLDescricao4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        QntDias3.setText("Quant. Dias");
+
+        jSpinnerQntDias3.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jSpinnerQntDias3.setFocusable(false);
+
+        jTextFieldVlrDiaria3.setEditable(false);
+        jTextFieldVlrDiaria3.setText("60.00");
+
+        ValorDiaria3.setText("Valor Diária");
+
+        Total3.setText("Total");
+
+        jLabel11.setText("R$");
+
+        jLabel12.setText("R$");
+
+        jLbResultado3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLbResultado3.setForeground(new java.awt.Color(204, 51, 0));
+        jLbResultado3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLbResultado3.setText("0");
+
+        bntCalcular3.setText("Calcular");
+        bntCalcular3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCalcular3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelFichaTecnica3Layout = new javax.swing.GroupLayout(jPanelFichaTecnica3);
+        jPanelFichaTecnica3.setLayout(jPanelFichaTecnica3Layout);
+        jPanelFichaTecnica3Layout.setHorizontalGroup(
+            jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLDescricao4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(QntDias3)
+                    .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jSpinnerQntDias3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
+                .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bntCalcular3)
+                    .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                        .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(ValorDiaria3))
+                            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addGap(12, 12, 12)
+                                .addComponent(jTextFieldVlrDiaria3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(Total3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel12)
+                            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLbResultado3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+        );
+        jPanelFichaTecnica3Layout.setVerticalGroup(
+            jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(jLDescricao4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                        .addComponent(Total3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLbResultado3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                                .addComponent(QntDias3)
+                                .addGap(6, 6, 6)
+                                .addComponent(jSpinnerQntDias3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                                .addComponent(ValorDiaria3)
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanelFichaTecnica3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelFichaTecnica3Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel11))
+                                    .addComponent(jTextFieldVlrDiaria3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(bntCalcular3))
+        );
+
+        jPanel3.add(jPanelFichaTecnica3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, 247));
+
+        jScrollPane2.setViewportView(jPanel3);
+
+        javax.swing.GroupLayout jPanelCatalogo1Layout = new javax.swing.GroupLayout(jPanelCatalogo1);
+        jPanelCatalogo1.setLayout(jPanelCatalogo1Layout);
+        jPanelCatalogo1Layout.setHorizontalGroup(
+            jPanelCatalogo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo1Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanelCatalogo1Layout.setVerticalGroup(
+            jPanelCatalogo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo1Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        PainelCatA.addTab("Tabela A", jPanel1);
+        PainelCatB.addTab("Tabela B", jPanelCatalogo1);
 
-        PainelCategorias.addTab("Categoria A", PainelCatA);
         PainelCategorias.addTab("Categoria B", PainelCatB);
+
+        jScrollPane3.setAutoscrolls(true);
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelFichaTecnica4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelFichaTecnica4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLDescricao5.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
+        jLDescricao5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelFichaTecnica4.add(jLDescricao5, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 16, 270, 126));
+
+        QntDias4.setText("Quant. Dias");
+        jPanelFichaTecnica4.add(QntDias4, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 160, -1, -1));
+
+        jSpinnerQntDias4.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jSpinnerQntDias4.setFocusable(false);
+        jPanelFichaTecnica4.add(jSpinnerQntDias4, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 181, 52, 28));
+
+        jTextFieldVlrDiaria4.setEditable(false);
+        jTextFieldVlrDiaria4.setText("60.00");
+        jPanelFichaTecnica4.add(jTextFieldVlrDiaria4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 182, -1, -1));
+
+        ValorDiaria4.setText("Valor Diária");
+        jPanelFichaTecnica4.add(ValorDiaria4, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 160, -1, -1));
+
+        Total4.setText("Total");
+        jPanelFichaTecnica4.add(Total4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 50, 30));
+
+        jLabel13.setText("R$");
+        jPanelFichaTecnica4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 188, -1, -1));
+
+        jLabel14.setText("R$");
+        jPanelFichaTecnica4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, 20));
+
+        jLbResultado4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLbResultado4.setForeground(new java.awt.Color(204, 51, 0));
+        jLbResultado4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLbResultado4.setText("0");
+        jPanelFichaTecnica4.add(jLbResultado4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, -1));
+
+        bntCalcular4.setText("Calcular");
+        bntCalcular4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCalcular4ActionPerformed(evt);
+            }
+        });
+        jPanelFichaTecnica4.add(bntCalcular4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
+
+        jPanel4.add(jPanelFichaTecnica4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, 247));
+
+        carro1_catC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/vw - UP-200x100.png"))); // NOI18N
+        carro1_catC.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel4.add(carro1_catC, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 230, 172));
+
+        jgbFichaTecnica4.setText("Ficha Técnica");
+        jgbFichaTecnica4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica4MouseClicked(evt);
+            }
+        });
+        jPanel4.add(jgbFichaTecnica4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, 57));
+
+        jgbLocar4.setText("Locar");
+        jgbLocar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jgbLocar4ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jgbLocar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 110, 57));
+
+        jLSituacao4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSituacao4.setText("Disponivel");
+        jPanel4.add(jLSituacao4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 127, -1));
+
+        carro2_catC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/Voyage.png"))); // NOI18N
+        carro2_catC.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel4.add(carro2_catC, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 230, 172));
+
+        jLSituacao5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSituacao5.setText("Disponivel");
+        jPanel4.add(jLSituacao5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 127, -1));
+
+        jgbFichaTecnica5.setText("Ficha Técnica");
+        jgbFichaTecnica5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica5MouseClicked(evt);
+            }
+        });
+        jPanel4.add(jgbFichaTecnica5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, -1, 57));
+
+        jgbLocar5.setText("Locar");
+        jPanel4.add(jgbLocar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, 111, 57));
+
+        jPanelFichaTecnica5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLDescricao6.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
+        jLDescricao6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        QntDias5.setText("Quant. Dias");
+
+        jSpinnerQntDias5.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jSpinnerQntDias5.setFocusable(false);
+
+        jTextFieldVlrDiaria5.setEditable(false);
+        jTextFieldVlrDiaria5.setText("85.00");
+
+        ValorDiaria5.setText("Valor Diária");
+
+        Total5.setText("Total");
+
+        jLabel17.setText("R$");
+
+        jLabel18.setText("R$");
+
+        jLbResultado5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLbResultado5.setForeground(new java.awt.Color(204, 51, 0));
+        jLbResultado5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLbResultado5.setText("0");
+
+        bntCalcular5.setText("Calcular");
+        bntCalcular5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCalcular5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelFichaTecnica5Layout = new javax.swing.GroupLayout(jPanelFichaTecnica5);
+        jPanelFichaTecnica5.setLayout(jPanelFichaTecnica5Layout);
+        jPanelFichaTecnica5Layout.setHorizontalGroup(
+            jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLDescricao6, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(QntDias5)
+                    .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jSpinnerQntDias5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
+                .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bntCalcular5)
+                    .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                        .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(ValorDiaria5))
+                            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(12, 12, 12)
+                                .addComponent(jTextFieldVlrDiaria5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(Total5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel18)
+                            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLbResultado5, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+        );
+        jPanelFichaTecnica5Layout.setVerticalGroup(
+            jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(jLDescricao6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                        .addComponent(Total5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLbResultado5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                                .addComponent(QntDias5)
+                                .addGap(6, 6, 6)
+                                .addComponent(jSpinnerQntDias5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                                .addComponent(ValorDiaria5)
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanelFichaTecnica5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelFichaTecnica5Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel17))
+                                    .addComponent(jTextFieldVlrDiaria5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(bntCalcular5))
+        );
+
+        jPanel4.add(jPanelFichaTecnica5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, 247));
+
+        jScrollPane3.setViewportView(jPanel4);
+
+        javax.swing.GroupLayout jPanelCatalogo2Layout = new javax.swing.GroupLayout(jPanelCatalogo2);
+        jPanelCatalogo2.setLayout(jPanelCatalogo2Layout);
+        jPanelCatalogo2Layout.setHorizontalGroup(
+            jPanelCatalogo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo2Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanelCatalogo2Layout.setVerticalGroup(
+            jPanelCatalogo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo2Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        PainelCatC.addTab("Tabela C", jPanelCatalogo2);
+
         PainelCategorias.addTab("Categoria C", PainelCatC);
+
+        jScrollPane4.setAutoscrolls(true);
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelFichaTecnica6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelFichaTecnica6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLDescricao7.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
+        jLDescricao7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelFichaTecnica6.add(jLDescricao7, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 16, 270, 126));
+
+        QntDias6.setText("Quant. Dias");
+        jPanelFichaTecnica6.add(QntDias6, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 160, -1, -1));
+
+        jSpinnerQntDias6.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jSpinnerQntDias6.setFocusable(false);
+        jPanelFichaTecnica6.add(jSpinnerQntDias6, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 181, 52, 28));
+
+        jTextFieldVlrDiaria6.setEditable(false);
+        jTextFieldVlrDiaria6.setText("120.00");
+        jPanelFichaTecnica6.add(jTextFieldVlrDiaria6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 182, -1, -1));
+
+        ValorDiaria6.setText("Valor Diária");
+        jPanelFichaTecnica6.add(ValorDiaria6, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 160, -1, -1));
+
+        Total6.setText("Total");
+        jPanelFichaTecnica6.add(Total6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 50, 30));
+
+        jLabel19.setText("R$");
+        jPanelFichaTecnica6.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 188, -1, -1));
+
+        jLabel20.setText("R$");
+        jPanelFichaTecnica6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, 20));
+
+        jLbResultado6.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLbResultado6.setForeground(new java.awt.Color(204, 51, 0));
+        jLbResultado6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLbResultado6.setText("0");
+        jPanelFichaTecnica6.add(jLbResultado6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, -1));
+
+        bntCalcular6.setText("Calcular");
+        bntCalcular6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCalcular6ActionPerformed(evt);
+            }
+        });
+        jPanelFichaTecnica6.add(bntCalcular6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
+
+        jPanel5.add(jPanelFichaTecnica6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, 247));
+
+        carro1_catD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/Fiat Doblô 7 Lugares.png"))); // NOI18N
+        carro1_catD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel5.add(carro1_catD, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 230, 172));
+
+        jgbFichaTecnica6.setText("Ficha Técnica");
+        jgbFichaTecnica6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica6MouseClicked(evt);
+            }
+        });
+        jPanel5.add(jgbFichaTecnica6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, 57));
+
+        jgbLocar6.setText("Locar");
+        jgbLocar6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jgbLocar6ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jgbLocar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 110, 57));
+
+        jLSituacao6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSituacao6.setText("Disponivel");
+        jPanel5.add(jLSituacao6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 127, -1));
+
+        carro2_catD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/mobil.png"))); // NOI18N
+        carro2_catD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel5.add(carro2_catD, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 230, 172));
+
+        jLSituacao7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSituacao7.setText("Disponivel");
+        jPanel5.add(jLSituacao7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 127, -1));
+
+        jgbFichaTecnica7.setText("Ficha Técnica");
+        jgbFichaTecnica7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica7MouseClicked(evt);
+            }
+        });
+        jPanel5.add(jgbFichaTecnica7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, -1, 57));
+
+        jgbLocar7.setText("Locar");
+        jPanel5.add(jgbLocar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, 111, 57));
+
+        jPanelFichaTecnica7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLDescricao8.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
+        jLDescricao8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        QntDias7.setText("Quant. Dias");
+
+        jSpinnerQntDias7.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jSpinnerQntDias7.setFocusable(false);
+
+        jTextFieldVlrDiaria7.setEditable(false);
+        jTextFieldVlrDiaria7.setText("95.00");
+
+        ValorDiaria7.setText("Valor Diária");
+
+        Total7.setText("Total");
+
+        jLabel23.setText("R$");
+
+        jLabel24.setText("R$");
+
+        jLbResultado7.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLbResultado7.setForeground(new java.awt.Color(204, 51, 0));
+        jLbResultado7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLbResultado7.setText("0");
+
+        bntCalcular7.setText("Calcular");
+        bntCalcular7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCalcular7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelFichaTecnica7Layout = new javax.swing.GroupLayout(jPanelFichaTecnica7);
+        jPanelFichaTecnica7.setLayout(jPanelFichaTecnica7Layout);
+        jPanelFichaTecnica7Layout.setHorizontalGroup(
+            jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLDescricao8, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(QntDias7)
+                    .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jSpinnerQntDias7, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
+                .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bntCalcular7)
+                    .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                        .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(ValorDiaria7))
+                            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addGap(12, 12, 12)
+                                .addComponent(jTextFieldVlrDiaria7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(Total7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel24)
+                            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLbResultado7, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+        );
+        jPanelFichaTecnica7Layout.setVerticalGroup(
+            jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(jLDescricao8, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                        .addComponent(Total7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLbResultado7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                                .addComponent(QntDias7)
+                                .addGap(6, 6, 6)
+                                .addComponent(jSpinnerQntDias7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                                .addComponent(ValorDiaria7)
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanelFichaTecnica7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelFichaTecnica7Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel23))
+                                    .addComponent(jTextFieldVlrDiaria7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(bntCalcular7))
+        );
+
+        jPanel5.add(jPanelFichaTecnica7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, 247));
+
+        jScrollPane4.setViewportView(jPanel5);
+
+        javax.swing.GroupLayout jPanelCatalogo3Layout = new javax.swing.GroupLayout(jPanelCatalogo3);
+        jPanelCatalogo3.setLayout(jPanelCatalogo3Layout);
+        jPanelCatalogo3Layout.setHorizontalGroup(
+            jPanelCatalogo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo3Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanelCatalogo3Layout.setVerticalGroup(
+            jPanelCatalogo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo3Layout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 17, Short.MAX_VALUE))
+        );
+
+        PainelCatD.addTab("Tabela D", jPanelCatalogo3);
+
         PainelCategorias.addTab("Categoria D", PainelCatD);
+
+        jScrollPane5.setAutoscrolls(true);
+
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelFichaTecnica8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanelFichaTecnica8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLDescricao9.setText("<html>  <p  text-align=”justify” style=”width:300px;”>  <b>VW Gol 2017 Highline 1.6</b>,  sensor de estacionamento traseiro; luzes de leitura dianteiras e traseiras; chave tipo canivete com comando remoto; coluna de direção com ajuste de altura e profundidade; espelhos retrovisores externos elétricos. </p>  </html>");
+        jLDescricao9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelFichaTecnica8.add(jLDescricao9, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 16, 270, 126));
+
+        QntDias8.setText("Quant. Dias");
+        jPanelFichaTecnica8.add(QntDias8, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 160, -1, -1));
+
+        jSpinnerQntDias8.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jSpinnerQntDias8.setFocusable(false);
+        jPanelFichaTecnica8.add(jSpinnerQntDias8, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 181, 52, 28));
+
+        jTextFieldVlrDiaria8.setEditable(false);
+        jTextFieldVlrDiaria8.setText("150.00");
+        jPanelFichaTecnica8.add(jTextFieldVlrDiaria8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 182, -1, -1));
+
+        ValorDiaria8.setText("Valor Diária");
+        jPanelFichaTecnica8.add(ValorDiaria8, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 160, -1, -1));
+
+        Total8.setText("Total");
+        jPanelFichaTecnica8.add(Total8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 50, 30));
+
+        jLabel25.setText("R$");
+        jPanelFichaTecnica8.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 188, -1, -1));
+
+        jLabel26.setText("R$");
+        jPanelFichaTecnica8.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, 20));
+
+        jLbResultado8.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLbResultado8.setForeground(new java.awt.Color(204, 51, 0));
+        jLbResultado8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLbResultado8.setText("0");
+        jPanelFichaTecnica8.add(jLbResultado8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, -1));
+
+        bntCalcular8.setText("Calcular");
+        bntCalcular8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCalcular8ActionPerformed(evt);
+            }
+        });
+        jPanelFichaTecnica8.add(bntCalcular8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
+
+        jPanel6.add(jPanelFichaTecnica8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, 247));
+
+        carro1_catE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Imagens/Pik-Up 4x4 completa.png"))); // NOI18N
+        carro1_catE.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel6.add(carro1_catE, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 230, 172));
+
+        jgbFichaTecnica8.setText("Ficha Técnica");
+        jgbFichaTecnica8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbFichaTecnica8MouseClicked(evt);
+            }
+        });
+        jPanel6.add(jgbFichaTecnica8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, 57));
+
+        jgbLocar8.setText("Locar");
+        jgbLocar8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jgbLocar8ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jgbLocar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 110, 57));
+
+        jLSituacao8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSituacao8.setText("Disponivel");
+        jPanel6.add(jLSituacao8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 127, -1));
+
+        jScrollPane5.setViewportView(jPanel6);
+
+        javax.swing.GroupLayout jPanelCatalogo4Layout = new javax.swing.GroupLayout(jPanelCatalogo4);
+        jPanelCatalogo4.setLayout(jPanelCatalogo4Layout);
+        jPanelCatalogo4Layout.setHorizontalGroup(
+            jPanelCatalogo4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo4Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanelCatalogo4Layout.setVerticalGroup(
+            jPanelCatalogo4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCatalogo4Layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        PainelCatE.addTab("Tabela E", jPanelCatalogo4);
+
         PainelCategorias.addTab("Categoria E", PainelCatE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -407,23 +1192,13 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelCategorias, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PainelCategorias)
+                .addContainerGap())
         );
 
-        setBounds(0, 0, 706, 362);
+        setBounds(0, 0, 669, 384);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jgbFichaTecnicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbFichaTecnicaActionPerformed
-       ocultarElementosInterface();
-        
-        if (jgbFichaTecnica.isSelected()) { //Se o Botão for selecionado faça
-            jgbFichaTecnica.setBackground(Color.GREEN); // Modar a Cor do Botão
-            mostrarElementosInterface(); // Mostra os Elemento da Painel
-        } else {
-            jgbFichaTecnica.setBackground(Color.RED); //Muda a Cor do Botão
-            ocultarElementosInterface(); //Oculta os Elementos do Painel;
-        }
-    }//GEN-LAST:event_jgbFichaTecnicaActionPerformed
 
     private void bntCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcularActionPerformed
         int qnt = Integer.parseInt(jSpinnerQntDias.getValue().toString());
@@ -432,13 +1207,157 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         jLbResultado.setText(String.format("%.2f", total));
     }//GEN-LAST:event_bntCalcularActionPerformed
 
+    private void bntCalcular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular1ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias1.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria1.getText());
+        float total = qnt * valor;
+        jLbResultado1.setText(String.format("%.2f", total));
+    }//GEN-LAST:event_bntCalcular1ActionPerformed
+
+
+    private void jgbFichaTecnicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnicaMouseClicked
+        if (jgbFichaTecnica.isSelected()) { //Se o Botão for selecionado faça
+            mostrarElementosInterface();
+
+        } else {
+            jgbFichaTecnica.setBackground(Color.RED); //Muda a Cor do Botão
+            //Oculta os Elementos do Painel;
+            ocultarElementosInterface();
+
+        }
+    }//GEN-LAST:event_jgbFichaTecnicaMouseClicked
+
+    private void jgbFichaTecnica1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica1MouseClicked
+        if (jgbFichaTecnica1.isSelected()) { //Se o Botão for selecionado faça
+
+            jgbFichaTecnica1.setBackground(Color.GREEN); // Modar a Cor do Botão
+            // Mostra os Elemento da Painel
+            jPanelFichaTecnica1.setVisible(true);
+            jLDescricao2.setVisible(true);
+            QntDias1.setVisible(true);
+            ValorDiaria1.setVisible(true);
+            Total1.setVisible(true);
+            jSpinnerQntDias1.setVisible(true);
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(true);
+            jTextFieldVlrDiaria1.setVisible(true);
+            jLbResultado1.setVisible(true);
+
+        } else {
+            jgbFichaTecnica1.setBackground(Color.RED); //Muda a Cor do Botão
+            //Oculta os Elementos do Painel;
+            jPanelFichaTecnica1.setVisible(false);
+            jLDescricao2.setVisible(false);
+            QntDias1.setVisible(false);
+            ValorDiaria1.setVisible(false);
+            Total1.setVisible(false);
+            jSpinnerQntDias1.setVisible(false);
+            jLabel7.setVisible(false);
+            jLabel8.setVisible(false);
+            jTextFieldVlrDiaria1.setVisible(false);
+            jLbResultado1.setVisible(false);
+
+        }
+    }//GEN-LAST:event_jgbFichaTecnica1MouseClicked
+
+    private void jgbLocarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbLocarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbLocarActionPerformed
+
     private void jgbFichaTecnica1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbFichaTecnica1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jgbFichaTecnica1ActionPerformed
 
-    private void bntCalcular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular1ActionPerformed
+    private void bntCalcular2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular2ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias2.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria2.getText());
+        float total = qnt * valor;
+        jLbResultado2.setText(String.format("%.2f", total));  
+    }//GEN-LAST:event_bntCalcular2ActionPerformed
+
+    private void jgbFichaTecnica2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica2MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_bntCalcular1ActionPerformed
+    }//GEN-LAST:event_jgbFichaTecnica2MouseClicked
+
+    private void jgbLocar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbLocar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbLocar2ActionPerformed
+
+    private void jgbFichaTecnica3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbFichaTecnica3MouseClicked
+
+    private void bntCalcular3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular3ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias3.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria3.getText());
+        float total = qnt * valor;
+        jLbResultado3.setText(String.format("%.2f", total));
+    }//GEN-LAST:event_bntCalcular3ActionPerformed
+
+    private void bntCalcular4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular4ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias4.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria4.getText());
+        float total = qnt * valor;
+        jLbResultado4.setText(String.format("%.2f", total));    
+    }//GEN-LAST:event_bntCalcular4ActionPerformed
+
+    private void jgbFichaTecnica4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbFichaTecnica4MouseClicked
+
+    private void jgbLocar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbLocar4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbLocar4ActionPerformed
+
+    private void jgbFichaTecnica5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbFichaTecnica5MouseClicked
+
+    private void bntCalcular5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular5ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias5.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria5.getText());
+        float total = qnt * valor;
+        jLbResultado5.setText(String.format("%.2f", total));    
+    }//GEN-LAST:event_bntCalcular5ActionPerformed
+
+    private void jgbFichaTecnica6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbFichaTecnica6MouseClicked
+
+    private void jgbLocar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbLocar6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbLocar6ActionPerformed
+
+    private void jgbFichaTecnica7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbFichaTecnica7MouseClicked
+
+    private void bntCalcular7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular7ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias7.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria7.getText());
+        float total = qnt * valor;
+        jLbResultado7.setText(String.format("%.2f", total));    }//GEN-LAST:event_bntCalcular7ActionPerformed
+
+    private void bntCalcular8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular8ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias8.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria8.getText());
+        float total = qnt * valor;
+        jLbResultado8.setText(String.format("%.2f", total));     }//GEN-LAST:event_bntCalcular8ActionPerformed
+
+    private void jgbFichaTecnica8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnica8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbFichaTecnica8MouseClicked
+
+    private void jgbLocar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbLocar8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jgbLocar8ActionPerformed
+
+    private void bntCalcular6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcular6ActionPerformed
+        int qnt = Integer.parseInt(jSpinnerQntDias6.getValue().toString());
+        float valor = Float.parseFloat(jTextFieldVlrDiaria6.getText());
+        float total = qnt * valor;
+        jLbResultado6.setText(String.format("%.2f", total));
+    }//GEN-LAST:event_bntCalcular6ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -450,36 +1369,153 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
     private javax.swing.JTabbedPane PainelCategorias;
     private javax.swing.JLabel QntDias;
     private javax.swing.JLabel QntDias1;
+    private javax.swing.JLabel QntDias2;
+    private javax.swing.JLabel QntDias3;
+    private javax.swing.JLabel QntDias4;
+    private javax.swing.JLabel QntDias5;
+    private javax.swing.JLabel QntDias6;
+    private javax.swing.JLabel QntDias7;
+    private javax.swing.JLabel QntDias8;
     private javax.swing.JLabel Total;
     private javax.swing.JLabel Total1;
+    private javax.swing.JLabel Total2;
+    private javax.swing.JLabel Total3;
+    private javax.swing.JLabel Total4;
+    private javax.swing.JLabel Total5;
+    private javax.swing.JLabel Total6;
+    private javax.swing.JLabel Total7;
+    private javax.swing.JLabel Total8;
     private javax.swing.JLabel ValorDiaria;
     private javax.swing.JLabel ValorDiaria1;
+    private javax.swing.JLabel ValorDiaria2;
+    private javax.swing.JLabel ValorDiaria3;
+    private javax.swing.JLabel ValorDiaria4;
+    private javax.swing.JLabel ValorDiaria5;
+    private javax.swing.JLabel ValorDiaria6;
+    private javax.swing.JLabel ValorDiaria7;
+    private javax.swing.JLabel ValorDiaria8;
     private javax.swing.JButton bntCalcular;
     private javax.swing.JButton bntCalcular1;
+    private javax.swing.JButton bntCalcular2;
+    private javax.swing.JButton bntCalcular3;
+    private javax.swing.JButton bntCalcular4;
+    private javax.swing.JButton bntCalcular5;
+    private javax.swing.JButton bntCalcular6;
+    private javax.swing.JButton bntCalcular7;
+    private javax.swing.JButton bntCalcular8;
+    private javax.swing.JLabel carro1_catA;
+    private javax.swing.JLabel carro1_catB;
+    private javax.swing.JLabel carro1_catC;
+    private javax.swing.JLabel carro1_catD;
+    private javax.swing.JLabel carro1_catE;
+    private javax.swing.JLabel carro2_catA;
+    private javax.swing.JLabel carro2_catB;
+    private javax.swing.JLabel carro2_catC;
+    private javax.swing.JLabel carro2_catD;
     private javax.swing.JLabel jLDescricao1;
     private javax.swing.JLabel jLDescricao2;
+    private javax.swing.JLabel jLDescricao3;
+    private javax.swing.JLabel jLDescricao4;
+    private javax.swing.JLabel jLDescricao5;
+    private javax.swing.JLabel jLDescricao6;
+    private javax.swing.JLabel jLDescricao7;
+    private javax.swing.JLabel jLDescricao8;
+    private javax.swing.JLabel jLDescricao9;
     private javax.swing.JLabel jLSituacao;
     private javax.swing.JLabel jLSituacao1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLSituacao2;
+    private javax.swing.JLabel jLSituacao3;
+    private javax.swing.JLabel jLSituacao4;
+    private javax.swing.JLabel jLSituacao5;
+    private javax.swing.JLabel jLSituacao6;
+    private javax.swing.JLabel jLSituacao7;
+    private javax.swing.JLabel jLSituacao8;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLbResultado;
     private javax.swing.JLabel jLbResultado1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLbResultado2;
+    private javax.swing.JLabel jLbResultado3;
+    private javax.swing.JLabel jLbResultado4;
+    private javax.swing.JLabel jLbResultado5;
+    private javax.swing.JLabel jLbResultado6;
+    private javax.swing.JLabel jLbResultado7;
+    private javax.swing.JLabel jLbResultado8;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanelCatalogo;
+    private javax.swing.JPanel jPanelCatalogo1;
+    private javax.swing.JPanel jPanelCatalogo2;
+    private javax.swing.JPanel jPanelCatalogo3;
+    private javax.swing.JPanel jPanelCatalogo4;
     private javax.swing.JPanel jPanelFichaTecnica;
     private javax.swing.JPanel jPanelFichaTecnica1;
+    private javax.swing.JPanel jPanelFichaTecnica2;
+    private javax.swing.JPanel jPanelFichaTecnica3;
+    private javax.swing.JPanel jPanelFichaTecnica4;
+    private javax.swing.JPanel jPanelFichaTecnica5;
+    private javax.swing.JPanel jPanelFichaTecnica6;
+    private javax.swing.JPanel jPanelFichaTecnica7;
+    private javax.swing.JPanel jPanelFichaTecnica8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSpinner jSpinnerQntDias;
     private javax.swing.JSpinner jSpinnerQntDias1;
+    private javax.swing.JSpinner jSpinnerQntDias2;
+    private javax.swing.JSpinner jSpinnerQntDias3;
+    private javax.swing.JSpinner jSpinnerQntDias4;
+    private javax.swing.JSpinner jSpinnerQntDias5;
+    private javax.swing.JSpinner jSpinnerQntDias6;
+    private javax.swing.JSpinner jSpinnerQntDias7;
+    private javax.swing.JSpinner jSpinnerQntDias8;
     private javax.swing.JTextField jTextFieldVlrDiaria;
     private javax.swing.JTextField jTextFieldVlrDiaria1;
+    private javax.swing.JTextField jTextFieldVlrDiaria2;
+    private javax.swing.JTextField jTextFieldVlrDiaria3;
+    private javax.swing.JTextField jTextFieldVlrDiaria4;
+    private javax.swing.JTextField jTextFieldVlrDiaria5;
+    private javax.swing.JTextField jTextFieldVlrDiaria6;
+    private javax.swing.JTextField jTextFieldVlrDiaria7;
+    private javax.swing.JTextField jTextFieldVlrDiaria8;
     private javax.swing.JToggleButton jgbFichaTecnica;
     private javax.swing.JToggleButton jgbFichaTecnica1;
+    private javax.swing.JToggleButton jgbFichaTecnica2;
+    private javax.swing.JToggleButton jgbFichaTecnica3;
+    private javax.swing.JToggleButton jgbFichaTecnica4;
+    private javax.swing.JToggleButton jgbFichaTecnica5;
+    private javax.swing.JToggleButton jgbFichaTecnica6;
+    private javax.swing.JToggleButton jgbFichaTecnica7;
+    private javax.swing.JToggleButton jgbFichaTecnica8;
     private javax.swing.JToggleButton jgbLocar;
     private javax.swing.JToggleButton jgbLocar1;
+    private javax.swing.JToggleButton jgbLocar2;
+    private javax.swing.JToggleButton jgbLocar3;
+    private javax.swing.JToggleButton jgbLocar4;
+    private javax.swing.JToggleButton jgbLocar5;
+    private javax.swing.JToggleButton jgbLocar6;
+    private javax.swing.JToggleButton jgbLocar7;
+    private javax.swing.JToggleButton jgbLocar8;
     // End of variables declaration//GEN-END:variables
 }

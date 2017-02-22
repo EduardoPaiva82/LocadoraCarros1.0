@@ -65,7 +65,7 @@ public class Tela_CadastroCliente extends javax.swing.JInternalFrame {
             pst.setString(9, jFormattedDataVenciCNH.getText());
 
             //caso os campos estiverem vazios isEmpty efeiturar o bloco de código abaixo;
-            if (jTextNomeCliente.getText().isEmpty() || jFormattedDataNascimento.getText().isEmpty() || jFormattedCPF.getText().isEmpty() || jFormattedCelular.getText().isEmpty() || jFormattedCNH.getText().isEmpty() || jFormattedDataPrimCNH.getText().isEmpty() || jFormattedDataVenciCNH.getText().isEmpty()) {
+            if (jTextNomeCliente.getText().isEmpty() && jFormattedDataNascimento.getText().isEmpty() && jFormattedCPF.getText().isEmpty() && jFormattedCelular.getText().isEmpty() && jFormattedCNH.getText().isEmpty() && jFormattedDataPrimCNH.getText().isEmpty() && jFormattedDataVenciCNH.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Preencha os Campos Obrigatórios!!!");
 
             } else {

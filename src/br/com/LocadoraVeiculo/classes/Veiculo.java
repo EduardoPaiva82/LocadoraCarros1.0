@@ -1,4 +1,3 @@
-
 package br.com.LocadoraVeiculo.classes;
 
 /**
@@ -6,31 +5,33 @@ package br.com.LocadoraVeiculo.classes;
  * @author edunativa
  */
 public class Veiculo {
+
     private String marca;
     private String modelo;
-    private String ano;
+    private int ano;
     private String placa;
     private String chassi;
     private boolean situacaoLocacao;
-    private int valorBonusCarro;
+    private float vlrDiaria;
+    private byte imagemCarro;
 
     //Construtores
-
-    public Veiculo(String marca, String modelo, String ano, String placa, String chassi, boolean situacaoLocacao, int valorBonusCarro) {
+    public Veiculo(String marca, String modelo, int ano, String placa, String chassi, boolean situacaoLocacao, float vlrDiaria, byte imagemCarro) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
         this.placa = placa;
         this.chassi = chassi;
         this.situacaoLocacao = situacaoLocacao;
-        this.valorBonusCarro = valorBonusCarro;
+        this.vlrDiaria = vlrDiaria;
+        this.imagemCarro = imagemCarro;
     }
-   
 
     public Veiculo() {
     }
 
     //Metodos Acessores;
+
     public String getMarca() {
         return marca;
     }
@@ -47,11 +48,11 @@ public class Veiculo {
         this.modelo = modelo;
     }
 
-    public String getAno() {
+    public int getAno() {
         return ano;
     }
 
-    public void setAno(String ano) {
+    public void setAno(int ano) {
         this.ano = ano;
     }
 
@@ -78,6 +79,23 @@ public class Veiculo {
     public void setSituacaoLocacao(boolean situacaoLocacao) {
         this.situacaoLocacao = situacaoLocacao;
     }
+
+    public float getVlrDiaria() {
+        return vlrDiaria;
+    }
+
+    public void setVlrDiaria(float vlrDiaria) {
+        this.vlrDiaria = vlrDiaria;
+    }
+
+    public byte getImagemCarro() {
+        return imagemCarro;
+    }
+
+    public void setImagemCarro(byte imagemCarro) {
+        this.imagemCarro = imagemCarro;
+    }
     
     
+
 }

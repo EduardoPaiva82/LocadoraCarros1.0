@@ -6,6 +6,7 @@
 package br.com.LocadoraVeiculo.TabelaVeiculos;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -219,6 +220,23 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         setTitle("Tabela de Veículos");
         setMaximumSize(new java.awt.Dimension(800, 700));
         setPreferredSize(new java.awt.Dimension(800, 700));
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jScrollPane1.setAutoscrolls(true);
 
@@ -283,9 +301,9 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         jPanel2.add(jgbFichaTecnica, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, 57));
 
         jgbLocar.setText("Locar");
-        jgbLocar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jgbLocarActionPerformed(evt);
+        jgbLocar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jgbLocarMouseClicked(evt);
             }
         });
         jPanel2.add(jgbLocar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 110, 57));
@@ -1217,6 +1235,7 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
 
     private void jgbFichaTecnicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbFichaTecnicaMouseClicked
         if (jgbFichaTecnica.isSelected()) { //Se o Botão for selecionado faça
+            jgbFichaTecnica.setBackground(Color.GREEN);
             mostrarElementosInterface();
 
         } else {
@@ -1259,10 +1278,6 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
 
         }
     }//GEN-LAST:event_jgbFichaTecnica1MouseClicked
-
-    private void jgbLocarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbLocarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jgbLocarActionPerformed
 
     private void jgbFichaTecnica1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jgbFichaTecnica1ActionPerformed
         // TODO add your handling code here:
@@ -1358,6 +1373,52 @@ public class Tela_Categorias extends javax.swing.JInternalFrame {
         float total = qnt * valor;
         jLbResultado6.setText(String.format("%.2f", total));
     }//GEN-LAST:event_bntCalcular6ActionPerformed
+
+    
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+        jPanelFichaTecnica.setVisible(false);
+        jLDescricao1.setVisible(false);
+        QntDias.setVisible(false);
+        ValorDiaria.setVisible(false);
+        Total.setVisible(false);
+        jSpinnerQntDias.setVisible(false);
+        jLabel5.setVisible(false);
+        jLabel6.setVisible(false);
+        jTextFieldVlrDiaria.setVisible(false);
+        jLbResultado.setVisible(false);
+        
+        jPanelFichaTecnica1.setVisible(false);
+        jLDescricao2.setVisible(false);
+        QntDias1.setVisible(false);
+        ValorDiaria1.setVisible(false);
+        Total1.setVisible(false);
+        jSpinnerQntDias1.setVisible(false);
+        jLabel7.setVisible(false);
+        jLabel8.setVisible(false);
+        jTextFieldVlrDiaria1.setVisible(false);
+        jLbResultado1.setVisible(false);
+    }//GEN-LAST:event_formInternalFrameOpened
+
+    private void jgbLocarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jgbLocarMouseClicked
+       
+        jLSituacao.setText("Não Disponível");
+        jLSituacao.setForeground(Color.RED);
+        String titulo = "Locar Veiculo";
+        String menssagem = "Obrigado pela Preferência\n Caso Queira comfirmar o Locação precione o botão SIM!";
+         
+        int opcao = JOptionPane.showConfirmDialog(null,menssagem, titulo ,JOptionPane.YES_OPTION);
+         
+         if(opcao == JOptionPane.YES_OPTION){
+            ConfirmarPag pag = new ConfirmarPag();
+            pag.setVisible(true);
+         
+         }else{
+            jLSituacao.setText("Disponível");
+            jLSituacao.setForeground(Color.GREEN);
+         }
+        
+        
+    }//GEN-LAST:event_jgbLocarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,9 +5,19 @@
  */
 package br.com.LocadoraVeiculo.Telas.Cadastros;
 
+import br.com.LocadoraVeiculo.ConexaoBD.ConexaoBD;
+import java.awt.HeadlessException;
+import java.awt.Image;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -16,11 +26,16 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
 
+    Connection conexao = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
+
     /**
      * Creates new form Tela_CadVeiculo
      */
     public Tela_CadVeiculo() {
         initComponents();
+        conexao = ConexaoBD.conector();
     }
 
     /**
@@ -36,7 +51,7 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanelImagem = new javax.swing.JPanel();
         ImgCarro = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_InserirImag = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextMarca = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -44,9 +59,11 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jTextAno = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jTextPlaca = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextNumChassi = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txtEnderecoImg = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
@@ -71,24 +88,15 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jPanelImagem.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Imagem do Veículo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 0, 12)))); // NOI18N
+        jPanelImagem.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ImgCarro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanelImagem.add(ImgCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 220, 170));
 
-        javax.swing.GroupLayout jPanelImagemLayout = new javax.swing.GroupLayout(jPanelImagem);
-        jPanelImagem.setLayout(jPanelImagemLayout);
-        jPanelImagemLayout.setHorizontalGroup(
-            jPanelImagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ImgCarro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-        );
-        jPanelImagemLayout.setVerticalGroup(
-            jPanelImagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ImgCarro, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-        );
-
-        jButton1.setText("Inserir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_InserirImag.setText("Inserir");
+        btn_InserirImag.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_InserirImagActionPerformed(evt);
             }
         });
 
@@ -108,13 +116,15 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
         jLabel4.setText("Placa:");
 
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("***####")));
+            jTextPlaca.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("***####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jTextPlaca.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
 
         jLabel5.setText("Número do Chassi:");
+
+        jLabel7.setText("Endereço da Imagem:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -122,37 +132,41 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextMarca)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextModelo)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jTextAno, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(txtEnderecoImg, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addComponent(btn_InserirImag, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(101, 101, 101))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1)
+                            .addComponent(jTextMarca)
+                            .addComponent(jLabel2)
+                            .addComponent(jTextModelo)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)))
-                    .addComponent(jLabel5)
-                    .addComponent(jTextNumChassi))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelImagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(355, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jTextAno, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(42, 42, 42)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jTextPlaca, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)))
+                            .addComponent(jLabel5)
+                            .addComponent(jTextNumChassi))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanelImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanelImagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -168,21 +182,44 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextNumChassi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextNumChassi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanelImagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_InserirImag, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtEnderecoImg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12))
         );
 
         btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         btnLimpar.setText("Limpar");
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/LocadoraVeiculo/Icones/IconeCarro 126x126.png"))); // NOI18N
 
@@ -217,11 +254,11 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 23, Short.MAX_VALUE))
+                        .addGap(0, 22, Short.MAX_VALUE))
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -232,36 +269,111 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
         setBounds(200, 80, 600, 500);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_InserirImagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_InserirImagActionPerformed
+        JFileChooser arquivo = new JFileChooser();
+        arquivo.setDialogTitle("Pesquisar Foto do Veiculo");
+        FileNameExtensionFilter filtrar = new FileNameExtensionFilter("Imagens", "jpg", "png"); // filtrar pela extrensão do arquivo;
+        arquivo.setCurrentDirectory(new File("/home/edunativa/NetBeansProjects/POO_LocadoraVeiculo/src/br/com/LocadoraVeiculo/Imagens")); // Selecionar um Diretório no qual queira pesquisar a imagem no Computador e filtrar pela extensão
+
+        int img = arquivo.showOpenDialog(null);
+        if (img == JFileChooser.APPROVE_OPTION) {
+            File file = arquivo.getSelectedFile();
+            txtEnderecoImg.setText(String.valueOf(file));
+            Image imgCar = getToolkit().getImage(txtEnderecoImg.getText());
+            ImgCarro.setIcon(new ImageIcon(imgCar));
+
+            /*
+        
         JFileChooser chamarPesqImagem = new JFileChooser(); //Instanciando a classe jFileChooser
         chamarPesqImagem.setDialogTitle("Pesquisar Foto do Veiculo"); //Criando um titulo para Janela de Pesquisa
         chamarPesqImagem.setFileSelectionMode(JFileChooser.FILES_ONLY); //serve para filtrar mais não selecionar diretórios
-
+        //chamarPesqImagem.setCurrentDirectory(new File("/home/edunativa/NetBeansProjects/POO_LocadoraVeiculo/src/br/com/LocadoraVeiculo/Imagens")); // Selecionar um Diretório no qual queira pesquisar a imagem no Computador e filtrar pela extensão
+        
         FileNameExtensionFilter filtrar = new FileNameExtensionFilter("Imagens", "jpg","png"); // filtrar pela extrensão do arquivo;
         chamarPesqImagem.setFileFilter(filtrar); //chamando o metodo para filtrar;
-
+        
         int retornarImagem = chamarPesqImagem.showOpenDialog(this); //Abrindo a Tela na Classe  atual;
         if(retornarImagem == JFileChooser.APPROVE_OPTION){
-            // metodo para quando o abrir for selecionado retornar;
-            File arquivo = chamarPesqImagem.getSelectedFile(); //pegar a url da imagem e colocar em arquivo;
-            ImgCarro.setIcon(new ImageIcon(arquivo.getPath())); //abrindo a imagem no Label
-        } 
-    }//GEN-LAST:event_jButton1ActionPerformed
+        // metodo para quando o abrir for selecionado retornar;
+        File arquivo = chamarPesqImagem.getSelectedFile(); //pegar a url da imagem e colocar em arquivo;
+        ImgCarro.setIcon(new ImageIcon(arquivo.getPath())); //abrindo a imagem no Label*/
+        }
+    }//GEN-LAST:event_btn_InserirImagActionPerformed
 
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        addVeiculo();
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        jTextMarca.setText(null);
+        jTextModelo.setText(null);
+        jTextAno.setText(null);
+        jTextPlaca.setText(null);
+        jTextNumChassi.setText(null);
+        txtEnderecoImg.setText(null);
+        ImgCarro.setVisible(false);
+    }//GEN-LAST:event_btnLimparActionPerformed
+
+    private void addVeiculo() {
+
+        String sql = "insert into Veiculos(marca, modelo, ano, placa, chassiDoVeiculo,imagemCarro )Values(?,?,?,?,?,?)";
+        try {
+            FileInputStream imagemCar;
+            pst = conexao.prepareStatement(sql);
+            pst.setString(1, jTextMarca.getText());
+            pst.setString(2, jTextMarca.getText());
+            pst.setString(3, jTextAno.getText());
+            pst.setString(4, jTextPlaca.getText());
+            pst.setString(5, jTextNumChassi.getText());
+            imagemCar = new FileInputStream(txtEnderecoImg.getText());
+            pst.setBinaryStream(6, imagemCar);
+
+            /*
+            imagemCar = new FileInputStream(ImgCarro.getText());
+            pst.setBinaryStream(6, imagemCar);*/
+            //caso os campos estiverem vazios isEmpty efeiturar o bloco de código abaixo;
+            if (jTextMarca.getText().isEmpty() && jTextModelo.getText().isEmpty() && jTextAno.getText().isEmpty() && jTextPlaca.getText().isEmpty() && jTextNumChassi.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Preencha os Campos Obrigatórios!!!");
+
+            } else {
+                //a linha abaixo atualiza a tabela Clientes com os dados do Formulário de cadastro;
+                //e Mostrar um janela de Dialogo dizendo que foi cadastrado com sucesso;
+                int adicionado = pst.executeUpdate();
+
+                if (adicionado > 0) {
+                    JOptionPane.showMessageDialog(null, "Veiculo Cadastrado\nCom Sucesso!!");
+                    //Limpar o Formulario ao clicar em Salvar
+                    jTextMarca.setText(null);
+                    jTextModelo.setText(null);
+                    jTextAno.setText(null);
+                    jTextPlaca.setText(null);
+                    jTextNumChassi.setText(null);
+                    txtEnderecoImg.setText(null);
+
+                }
+            }
+        } catch (HeadlessException | FileNotFoundException | SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Ops Erro ao Cadastrar Veiculo:\n" + ex);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ImgCarro;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JButton btn_InserirImag;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelImagem;
@@ -269,5 +381,7 @@ public class Tela_CadVeiculo extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextMarca;
     private javax.swing.JTextField jTextModelo;
     private javax.swing.JTextField jTextNumChassi;
+    private javax.swing.JFormattedTextField jTextPlaca;
+    private javax.swing.JTextField txtEnderecoImg;
     // End of variables declaration//GEN-END:variables
 }
